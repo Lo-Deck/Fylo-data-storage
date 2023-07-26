@@ -1,0 +1,172 @@
+*{
+    box-sizing: border-box;  
+}
+
+body{
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 400;
+    font-size: 0.875rem;
+    color: hsl(243, 100%, 93%);
+    background: url(./images/bg-mobile.png) no-repeat center/cover;
+}
+
+.left-display, .right-display{ 
+    background-color: hsl(228, 56%, 26%);
+    width: 20rem;
+    border-radius: 0.6rem;
+}
+
+.left-display{
+    padding: 2.5rem;
+    border-top-right-radius: 5.5rem;
+}
+
+.main-title{
+    margin: 0 0 2.2rem 0;
+}
+
+.icons{
+    display: inline-block;
+    background-color: hsl(229, 57%, 11%);
+    width: 3rem;
+    height: 3rem;
+    margin-right: 0.8rem;    
+    border-radius: 0.5rem;
+    position: relative;
+}
+
+.icons-img{
+    position: absolute;
+        top: 0.75rem; left: 0.85rem;
+}
+
+.left-display .icons:nth-child(3n) .icons-img{
+    top: 0.85rem; left: 0.7rem;
+}
+
+.left-display .icons:last-child .icons-img{
+        top: 1rem; left: 0.85rem;
+}
+
+.right-display{
+    text-align: center;
+    padding: 0 2rem 0;
+}
+
+.text{
+    padding-top: 1.7rem;
+}
+
+.text span{
+    font-weight: 700;
+}
+
+.loading{
+    width: 100%;
+    height: 1.2rem;
+    border-radius: 0.5rem;
+    background-color: hsl(227, 57%, 18%);
+    position: relative;
+}
+
+.loading-gradient{
+    width: 70%;
+    height: 75%;
+    border-radius: 0.5rem;
+    background: linear-gradient( to right, hsl(6, 100%, 80%), hsl(335, 100%, 65%) );
+    position: absolute;
+        left: 0.1rem; top: 0.145rem;
+}
+
+.loading-point{
+    width: 0.65rem;
+    height: 80%;
+    border-radius: 50%;
+    background-color: #fff;
+    position: absolute;
+        left: 10.4rem; top: 0.08rem;
+}
+
+.text-loading{
+    display: flex;
+    justify-content: space-between;
+    font-weight: 700;
+    margin-bottom: -1rem;
+}
+
+.loading-left{
+    background-color: #fff;
+    border-radius: 0.5rem;
+    line-height: 2;
+    color: hsl(229, 7%, 55%);
+    font-weight: 700;
+    text-transform: uppercase;
+    margin: 0 2.5rem 0; 
+    position: relative;
+        top: 2rem;
+}
+
+.loading-left span{
+    color: hsl(229, 57%, 11%);
+    font-size: 2.2rem;
+    vertical-align: sub;
+}
+
+@media screen and (min-width: 965px)
+{
+
+    body{
+        background: url(./images/bg-desktop.png) no-repeat bottom left / 100% 50%,
+                    hsl(229, 57%, 11%);
+    }
+
+    .container{
+        display: flex;
+    }
+
+    .left-display{ 
+        width: 22rem;
+        padding: 2.3rem;
+        border-top-right-radius: 5.5rem;  
+    }
+    
+    .right-display{
+        align-self: flex-end;
+        margin-left: 2rem;
+        width: 35rem;
+        height: 10rem; 
+        text-align: left;
+    }
+
+    .text-loading{
+        margin-bottom: 2rem;
+    }
+
+    .loading-left{
+        text-align: center;
+        width: 35%;
+        margin: 0;
+        position: relative;
+            top: -12.5rem; left: 20.5rem;
+    }
+
+    .loading-left::after{
+        content: "";
+        display: inline-block;
+        width: 2rem;
+        height: 3rem;
+        background-color: #fff;
+        position: absolute;
+            top: 3rem; left: 8.85rem;
+        clip-path: polygon(100% 0, 0 35%, 100% 100%);
+    }
+
+    .loading-point{
+        left: 20.85rem; top: 0.08rem;
+    }
+
+}
